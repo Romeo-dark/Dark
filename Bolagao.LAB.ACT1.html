@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Text and Change Button Color</title>
+    <title>Toggle Text</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,10 +29,6 @@
         var text = document.getElementById('text');
         var isOriginalText = true; 
 
-        function getRandomColor() {
-            return '#' + Math.floor(Math.random() * 16777215).toString(16);
-        }
-
         button.addEventListener('click', function() {
             if (isOriginalText) {
                 text.innerText = 'The text has been changed!';
@@ -42,7 +36,6 @@
                 text.innerText = 'Click this button to change this text';
             }
             isOriginalText = (isOriginalText === false); 
-            button.style.backgroundColor = getRandomColor();
         });
     </script>
 
